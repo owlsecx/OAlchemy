@@ -18,15 +18,18 @@
 
 ## 📌 Overview
 
-Identify unknown data, then hash, encode, and analyze
+OAlchemy is an advanced data-processing toolkit for security work, bundling hashing, encoding, cipher, analysis and transformation utilities into one command-line tool. It can hash and HMAC data, encode/decode across many formats, run classical ciphers, convert between numeric bases and perform regex, JSON and diff operations. The Reveal mode identifies unknown input and unwraps one layer at a time (JSON, JWT, URL, hex, Base64, Morse, binary and escapes).
 
 ---
 
 ## ✨ Features
 
-- offer_save(): full interactive save-location chooser — Default dir / CWD / Home / Custom path with overwrite confirmation and file-size report
-- _strip_ansi() helper for visible-length calculations
-- Reveal: identify unknown input and unwrap one layer (JSON, JWT, URL, hex, Base64, Morse, binary, escapes)
+- Hashing (md5/sha1/sha256/sha512/all) and keyed HMAC
+- Encode / decode: Base64/32/85, hex, URL, binary, ROT13 and Morse
+- Classical ciphers including Caesar shift and XOR with hex or text keys
+- Reveal mode: auto-identify input and unwrap one encoding layer
+- Shannon entropy, full text analysis and arbitrary base conversion
+- Regex match/replace plus JSON pretty-print and minify
 
 ---
 
@@ -40,7 +43,10 @@ Identify unknown data, then hash, encode, and analyze
 ## 🚀 Usage
 
 ```bash
-./OAlchemy
+./OAlchemy "hello" --hash sha256
+./OAlchemy --file data.bin --entropy
+./OAlchemy "SGVsbG8=" --reveal
+./OAlchemy --help
 ```
 
 ---
